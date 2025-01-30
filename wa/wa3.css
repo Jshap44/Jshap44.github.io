@@ -1,37 +1,37 @@
 .push-center{
-    text-align: center;
-    max-width: 800px;
-    font-size: 15px;
-    text-indent: 200;
-  };
+    float: center;
+    max-width: 40%;
+    font-size: 20px;
+    text-indent: 20px; 
+  }
 
   .push-right{
-    text-align: right;
+    float: right;
     max-width: 200px;
     font-size: 18px;
-  };
+  }
   
   .push-left{
     float: left;
-    max-width: 200px;
-    font-size: 12px;
-    text-indent: 20px;
+    max-width: 40%;
+    font-size: 20px;
+    text-indent: 20px; 
   }
 
   .image-align {
-    float: right;
-    margin-right: 60px;
+    float: center;
     height: 300px;
     width: 200px;
-  };
+    display: block;
+  }
   
   .caption-align{
     float: right;
     margin-right: 60px;
-  };
+  }
   
   h1{
     font-size: 30px;
     text-indent: 300px;
-  };
+  }
 
