@@ -5,6 +5,12 @@
     text-indent: 100;
   }
 
+  .push-right{
+    text-align: right;
+    max-width: 200px;
+    font-size: 18px;
+  }
+  
   .push-left{
     text-align: left;
     max-width: 200px;
@@ -12,11 +18,8 @@
     text-indent: 20px;
   }
 
-  .push-right{
-    text-align: right;
-    max-width: 200px;
-    font-size: 18px;
-  }
+  
+  
   h1{
     font-size: 30px;
     text-indent: 300px;
