@@ -1,0 +1,18 @@
+.push-center{
+    text-align: center;
+    max-width: 800px;
+    font-size: 20px;
+    text-indent: 100;
+  }
+
+  .push-left{
+    text-align: left;
+    max-width: 200;
+    font-size: 12px;
+    text-indent: 20px;
+  }
+  h1{
+    font-size: 30px;
+    text-indent: 300px;
+  }
+
