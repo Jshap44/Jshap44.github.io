@@ -7,9 +7,15 @@
 
   .push-left{
     text-align: left;
-    max-width: 200;
+    max-width: 200px;
     font-size: 12px;
     text-indent: 20px;
+  }
+
+  .push-right{
+    text-align: right;
+    max-width: 200px;
+    font-size: 18px;
   }
   h1{
     font-size: 30px;
