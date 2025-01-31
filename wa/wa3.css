@@ -1,6 +1,6 @@
 .push-center{
     float: center;
-    max-width: 40%;
+    max-width: 70%;
     font-size: 20px;
     text-indent: 20px; 
   }
@@ -20,8 +20,8 @@
 
   .image-align {
     float: center;
-    height: 300px;
-    width: 200px;
+    height: 400px;
+    width: 300px;
     display: block;
   }
   
