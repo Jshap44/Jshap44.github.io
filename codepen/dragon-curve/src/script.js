@@ -1,7 +1,7 @@
 "use strict";
 
 const LIMIT_FRACT = 5; // in pixels
-const DURATION = 300; // in ms, for each recursion level
+const DURATION = 500; // in ms, for each recursion level
 
 let canv, ctx; // canvas and context
 let maxx, maxy; // canvas dimensions

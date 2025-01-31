@@ -1,7 +1,7 @@
 The MIT License (MIT)
 
-Copyright (c) 2025 Jshap44 (https://codepen.io/Jshap44/pen/OPLqjMw)
-Fork of an original work Dragon Curve (https://codepen.io/Dillo/pen/Rwzxjge)
+Copyright (c) 2025 Jshap44 (https://codepen.io/Jshap44/pen/JoPzyBr)
+Fork of an original work Mic drop (https://codepen.io/chrisgannon/pen/oNdyrPj)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
