@@ -35,5 +35,12 @@
     text-indent: 300px;
   }
 
+  hr {
+    width: 110%;
+    height: 2px;
+    background-color: black;
+    border: none;
+}
+
 
 
