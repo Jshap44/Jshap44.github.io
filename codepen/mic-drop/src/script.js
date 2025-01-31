@@ -33,8 +33,8 @@ tl
 	ease: 'power2.in'
 }, 0.19)
 .to('#mic', {
-	duration: 1.55,
-	rotation: 3,
+	duration: 3,
+	rotation: 15,
 	transformOrigin: '50% 100%',
 	ease: 'wiggle({type:easeOut, wiggles:7})'
 }, 0.45)
