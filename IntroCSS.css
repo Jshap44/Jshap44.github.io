@@ -1,0 +1,32 @@
+body {
+    text-decoration: underline;
+}
+
+p {
+    font-size: 100px;
+    color: blue;
+    background-color: green;
+}
+
+.test{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* selector */
+#element1{
+    border: 20px solid black;
+}
+
+/* selector */
+#element2{
+    border: 40px dotted purple;
+}
+
+p:hover{
+    background-color: aqua;
+}
+
+a {
+    font: size 200px;
+}
+
