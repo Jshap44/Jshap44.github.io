@@ -20,7 +20,7 @@ body {
   /* Rulesets to be matched up with selectors */
   /* General Page Styles */
 
-  {
+  .main-card{
     width: 35em;
     height: 22em;
     margin: 5em auto;
