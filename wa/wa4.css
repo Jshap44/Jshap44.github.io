@@ -45,11 +45,20 @@ html {
   height: 7.5em;
 }
 
-.h2{
-  margin: 0px;
-  font-size:20px;
+.card article{
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-.p{
+.card h2{
+  margin: 0;
+  font-size:1.3em;
+}
+
+.card footer p{
   margin:0px;
+  font-size:0.9375;
+}
+
+.card article p{
+  color: white;
 }
