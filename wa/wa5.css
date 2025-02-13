@@ -1,4 +1,18 @@
 
+<<<<<<< HEAD
+=======
+  html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+body {
+    background-image: url("Overlays.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+>>>>>>> d0cb4f52d37de00757eddd244f6adebd56cf5ca7
 
 article{
     position:absolute;
@@ -44,11 +58,7 @@ article{
     text-align: center; 
 }
 
-body {
-    background-image: url("Overlays.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
+
 
 
 
