@@ -5,6 +5,11 @@
     height: 100%;
   }
   
+body {
+    background-image: url("Overlays.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
 
 article{
     position:absolute;
@@ -50,11 +55,7 @@ article{
     text-align: center; 
 }
 
-body {
-    background-image: url("Overlays.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
+
 
 
 
