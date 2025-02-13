@@ -1,5 +1,64 @@
 
-
-  body article{
-    background-image: url("Overlays.png");
+  html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
   }
+  
+
+article{
+    position:absolute;
+    bottom: 50px;
+    left: 500px;
+    font-size: 2em;
+    background-image: url("Screenshot\ 2025-02-13\ at\ 11.37.02.png");
+    background-repeat:no-repeat;
+    border: 2px solid black;
+    width: 450px;
+    height: 150px;
+    background-size: 100% 100%;
+    opacity: 0.7;
+  }
+
+  div p {
+    position: fixed;
+    left: 501px;
+    bottom:-50px;
+    font-size:3em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    word-spacing: 86px;
+    background: linear-gradient(to bottom, rgba(74, 144, 46, 0.4), rgba(30, 37, 113, 0.697)80%);
+    opacity: 0.8;
+  }
+
+  div footer {
+    position: absolute;
+    height: 150px;
+    width: 450px;
+    bottom: 50px;
+    right:15px;
+    font-size: 1.3em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border: 2px solid rgb(39, 28, 94);
+    background: linear-gradient(to bottom, rgba(249, 251, 248, 0.4), rgba(241, 241, 245, 0.697)80%);
+    opacity: 0.8;
+    border-radius: 50%;
+
+    display: flex;               
+    justify-content: center;     
+    align-items: center;        
+    text-align: center; 
+}
+
+body {
+    background-image: url("Overlays.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+
+
+
+
+
+  
