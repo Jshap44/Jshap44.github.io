@@ -66,14 +66,15 @@ nav a {
     width: 200px;
     float: left;
     /* not working wtf*/
-    gap: 13px;
+    gap: 50px;
 }
 
 @media screen and (max-width: 500px) {
     .grid {
-        display: flex; /* Ensure flex is applied */
-        flex-direction: column; /* Switch to vertical stacking */
-        gap: 30px; /* Add spacing between elements */
+        display: flex;
+        /* column gives vertical stacking */
+        flex-direction: column; 
+        gap: 30px; 
     }
 }
 
