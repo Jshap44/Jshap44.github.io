@@ -1,0 +1,97 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: blanchedalmond;
+}
+
+body h1 {
+    display: flex;
+    border-radius: 5px;
+    border-width: 4px;
+    border-style: solid;
+    border-color: aqua;
+    color:blue;
+    animation-name: box-move;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes box-move{
+    from{
+        top:0;
+        left: 0;
+    }
+    to{
+        top: 0;
+        left:100
+    }
+}
+nav{
+    height: 50vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:20px;
+    background-color:green;
+    
+}
+nav a{
+    width:10vw;
+    text-align: center;
+    text-decoration: none;
+    color:yellow;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+nav a:hover{
+    font-size: 50px;
+    color: yellow;
+}
+
+nav:hover{
+    height: max-content;
+    transition: background-color 1s;
+    background-color:purple;
+}
+img{
+    width:30vw;
+    height: 30vh;
+}
+
+#red-ball{
+    background-color:purple;
+    width: 180px;
+    height:180px;
+    border-radius: 50%;
+    position: absolute;
+    left:5vw;
+    top:0;
+    animation-name: ballmove;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    color:dodgerblue;
+    padding-left: 4%;
+}
+
+
+
+@keyframes ballmove{
+    from{
+        top:0;
+        left:0;
+    }
+    to{
+        top:95vh;
+        left:0;
+    }
+}
+
+/* Please change the color scheme -- change the color of the text, nav bar, ball, and background.
+Please change the image to something you like... perhaps it should align with the color changes you make in step 1? Your choice.
+Please change the font of the text on the screen.
+Please change the title to something other than "Put Your Title Here"
+Please animate something using animation.
+Please animate something using a transition. */
