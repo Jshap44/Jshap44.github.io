@@ -1,0 +1,64 @@
+body {
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
+}
+
+
+nav {
+    padding: 3.5em;
+    position: sticky;
+    top: 0;
+    background-image: url("nav.gif");
+    background-size: cover;
+    background-position: center;
+}
+
+.nav-picture {
+    height: 200px; /* Adjust as needed */
+    width: auto; /* Keeps aspect ratio */
+    margin-left: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    list-style: none;
+    font-size: 2em;
+    color:#ff33f9;
+}
+
+nav ul li a {
+    color: #ff33f9; /* Sets the text color */
+    text-decoration: none; /* Removes the underline from links */
+    font-weight: bold; /* Makes the text bold (optional) */
+}
+
+.events {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
+    gap: 10px; /* Adds space between items */
+    padding: 20px;
+    justify-content: center; /* Centers items horizontally */
+    display: block;
+}
+
+.events li {
+    display: flex; /* Makes each list item a flexbox */
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color:#ff33f9;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    max-width: 500px;
+}
+
