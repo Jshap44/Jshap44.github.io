@@ -1,0 +1,70 @@
+body{
+    background-image: url("cello.jpg");
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+div {
+    display: flex;
+    justify-content: center;  /* Centers text horizontally */
+    align-items: left;      /* Centers text vertically */
+    max-width: 50%;           /* Adjust width as needed */
+    margin: 0;             /* Centers the div on the page */
+    padding: 15px;
+    border-radius: 20px;
+    border: 2px solid aqua;
+}
+
+div p {
+    font-weight: bold;
+    text-align: left;  /* Ensures text is centered */
+    max-width: 100%;
+    font-family:monospace;
+    font-size: 2em;
+    color: white;
+    
+}
+
+div ul{
+    font-size: 3em;
+}
+
+.background-1{
+    background-image: url("1.png");
+}
+
+nav {
+    display: flex; /* Enables flexbox */
+    align-items: center; /* Centers items vertically */
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-image: url("../nav.gif");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.nav-picture {
+    max-width: 100%;
+    height: auto;
+    padding-right: 0;
+    display: block;
+}
+
+nav ul {
+    display: flex;
+    margin: 0;
+    gap: 170px;
+    list-style: none;
+    font-size: 2em;
+    flex-grow: 1;
+}
+
+nav ul li a {
+    color: #b981b8;; /* Sets the text color */
+    text-decoration: none; /* Removes the underline from links */
+    font-weight: bold; /* Makes the text bold (optional) */
+}

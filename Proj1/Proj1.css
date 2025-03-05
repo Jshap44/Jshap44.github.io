@@ -1,25 +1,38 @@
+
+
 body {
-    background-color: #fff;
-    color: #333;
+    background-color:black;
+    color: #b981b8;
     margin: 0;
     font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
 }
 
 
+h1 {
+    font-family:fantasy;
+    font-size:3em;
+}
 nav {
-    padding: 3.5em;
+    display: flex; /* Enables flexbox */
+    align-items: center; /* Centers items vertically */
+    justify-content: space-between;
     position: sticky;
     top: 0;
     background-image: url("nav.gif");
     background-size: cover;
     background-position: center;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
 }
 
 .nav-picture {
-    height: 200px; /* Adjust as needed */
-    width: auto; /* Keeps aspect ratio */
-    margin-left: 0;
+    max-width: 100%;
+    height: auto;
+    padding-right: 0;
+    display: block;
 }
+
 
 ul {
     list-style-type: none;
@@ -27,22 +40,22 @@ ul {
 
 nav ul {
     display: flex;
-    justify-content: space-between;
     margin: 0;
+    gap: 30px;
     list-style: none;
     font-size: 2em;
-    color:#ff33f9;
+    color:#b981b8;
+    flex-grow: 1;
 }
 
 nav ul li a {
-    color: #ff33f9; /* Sets the text color */
+    color: #b981b8; /* Sets the text color */
     text-decoration: none; /* Removes the underline from links */
     font-weight: bold; /* Makes the text bold (optional) */
 }
 
 .events {
     display: flex;
-    flex-wrap: wrap; /* Allows items to wrap to the next line if needed */
     gap: 10px; /* Adds space between items */
     padding: 20px;
     justify-content: center; /* Centers items horizontally */
@@ -56,9 +69,48 @@ nav ul li a {
     align-items: center;
     justify-content: center;
     background-color:#ff33f9;
-    padding: 30px;
-    border-radius: 10px;
+    padding: 120px;
+    border-radius: 20px;
     margin-bottom: 20px;
-    max-width: 500px;
+    max-width: 100%;
 }
 
+#concert1 {
+
+}
+
+#concert2 {
+
+}
+
+#concert3 {
+
+}
+
+#concert4 {
+
+}
+
+#concert5 {
+
+}
+
+#concert6 {
+
+}
+
+#concert7 {
+  
+}
+
+#concert8 {
+
+}
+
+#concert9 {
+   
+}
+
+#concert10 {
+
+}
