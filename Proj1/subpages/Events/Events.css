@@ -1,5 +1,4 @@
 
-
 body {
     background-color:black;
     color: #cfa3ce;
@@ -8,13 +7,9 @@ body {
 }
 
 
-h1 {
-    font-family:fantasy;
-    font-size:3em;
-}
 nav {
-    display: flex;
-    align-items: center;
+    display: flex; /* Enables flexbox */
+    align-items: center; /* Centers items vertically */
     justify-content: space-between;
     position: sticky;
     top: 0;
@@ -48,25 +43,25 @@ nav ul {
 }
 
 nav ul li a {
-    color: #cfa3ce;
-    text-decoration: none; 
-    font-weight: bold; 
+    color: #cfa3ce; /* Sets the text color */
+    text-decoration: none; /* Removes the underline from links */
+    font-weight: bold; /* Makes the text bold (optional) */
 }
 
 .events li a {
-    color: white; 
+    color: white; /* Ensure links inside the event boxes match */
 }
 
 .events {
     display: flex;
-    gap: 10px; 
+    gap: 10px; /* Adds space between items */
     padding: 20px;
-    justify-content: center; 
+    justify-content: center; /* Centers items horizontally */
     display: block;
 }
 
 .events li {
-    display: flex; 
+    display: flex; /* Makes each list item a flexbox */
     font-weight: bold;
     text-align: center;
     align-items: center;
@@ -75,7 +70,7 @@ nav ul li a {
     padding: 120px;
     border-radius: 20px;
     margin-bottom: 20px;
-    max-width: 40%;
+    max-width: 100%;
 }
 
 
