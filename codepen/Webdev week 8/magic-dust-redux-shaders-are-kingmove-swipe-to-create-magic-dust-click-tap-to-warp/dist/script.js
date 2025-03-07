@@ -21,7 +21,7 @@
     ambientMinTravel: 20,
     ambientMaxTravel: 100,
     ambientAngleChange: Math.PI / 2,
-    ambientCurveOffsetMin: -5,
+    ambientCurveOffsetMin: -50,
     ambientCurveOffsetMax: 500,
     
     mouseParticleCount: 300,//
