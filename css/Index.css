@@ -17,7 +17,7 @@ h1 {
 div p {
     display: flex;
     max-width: 56%;
-    color:#cfa3ce;
+    color:white;
     border-radius: 15px;
     align-items:center;
     justify-content: center;
@@ -258,7 +258,7 @@ nav ul li a {
 .eventpage nav ul {
     display: flex;
     margin: 0;
-    gap: 70px;
+    gap: 170px;
     list-style: none;
     font-size: 2em;
     color:#cfa3ce;
@@ -339,4 +339,14 @@ nav ul li a {
 
 #concert10 {
     background-image: url("../Proj1/Thermo.webp");
+}
+
+/* ----- */
+
+.conductors {
+    display:flex;
+    background-color:black;
+    color: #cfa3ce;
+    margin: 0;
+    font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
 }
