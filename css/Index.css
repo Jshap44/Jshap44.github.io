@@ -227,59 +227,206 @@
     }
 }
 
-/* For Smaller Screens (e.g., 400px) */
 @media screen and (max-width: 400px) {
-    /* Stack navigation items */
-    nav {
+    body {
         flex-direction: column;
-        height: auto;
-        padding: 10px;
-        text-align: center;
+    }
+    div p {
+        display: flex;
+        max-width: 56%;
+        color:white;
+        border-radius: 15px;
+        align-items:center;
+        justify-content: center;
+        padding-left: 15px;
+        font-family: fantasy;
+        font-size: 1.3em;
     }
 
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-        font-size: 1.5em;
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        background-image: url("../Proj1/nav.gif");
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        flex-wrap: wrap;
+        z-index: 10;
     }
 
     .nav-picture {
-        max-width: 60px;
-        position: relative;
-        left: 0;
-        margin-bottom: 10px;
+        height: auto;
+        display: block;
+        position:absolute;
+        left: 295px;
+        z-index: 7;
     }
 
-    h1 {
-        font-size: 1.8em;
-        text-align: center;
+    ul {
+        list-style-type: none;
     }
 
-    h2 {
-        font-size: 1.5em;
+    nav ul {
+        display: flex;
+        margin: 0;
+        gap: 170px;
+        list-style: none;
+        font-size: 2em;
+        color:#ffb5fe;
+        flex-grow: 1;
+        z-index: 15; 
     }
 
-    div p {
-        max-width: 80%;
-        font-size: 1em;
-    }
-
-    details summary {
-        font-size: 1.2em;
+    nav ul li a {
+        color: #ffb5fe;
+        text-decoration: none; 
+        font-weight: bold; 
     }
 
     .events {
-        padding: 10px;
+        display: flex;
+        gap: 10px; 
+        padding: 20px;
+        justify-content: center; 
+        display: block;
     }
 
     .events li {
-        padding: 40px;
-        font-size: 1em;
+        display: flex; 
+        font-weight: bold;
+        text-align: center;
+        align-items: center;
+        font-size: 1.2em;
+        padding: 120px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        max-width: 100%;
     }
 
-    footer {
+    .events li p {
+        display: flex; 
+        font-weight:normal;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         text-align: center;
-        font-size: 0.9em;
+        align-items: center;
+        justify-content: center;
+        padding: 120px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        cursor: pointer;
+    }
+
+    .events li summary {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    details {
+        width: 100%;
+        margin: 0 auto; 
+    }
+
+    #concert1 {
+        background-image: url("../Proj1/1.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        color:aquamarine;
+    }
+
+    #concert2 {
+        background-image: url("../Proj1/1.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: aquamarine;
+    }
+
+    #concert3 {
+        background-image: url("../Proj1/1.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: aquamarine;
+    }
+
+    #concert4 {
+        background-image: url("../Proj1/1.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: aquamarine;
+    }
+
+    #concert5 {
+        background-image: url("../Proj1/1.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        color:aquamarine;
+    }
+
+    #concert6 {
+        background-image: url("../Proj1/1.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: aquamarine;
+    }
+
+    #concert7 {
+        background-image: url("../Proj1/1.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: aquamarine;
+    }
+
+    #concert8 {
+        background-image: url("../Proj1/1.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: aquamarine;
+    }
+
+    #concert9 {
+        background-image: url("../Proj1/1.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: aquamarine;
+    }
+
+    #concert10 {
+        background-image: url("../Proj1/1.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: aquamarine;
+    }
+
+    /* ------------------ */
+
+    .concert {
+        background-repeat: no-repeat;
+    }
+
+    .concert div {
+        display: flex;
+        justify-content: center;  
+        align-items: left; 
+        min-height: 100%; 
+        max-width: 50%;   
+        padding: 15px;
+        border-radius: 15px;
+        border: 2px solid #ffb5fe;
+    }
+
+
+    .concert div p {
+        font-weight: bold;
+        text-align: left;  
+        max-width: 100%;
+        min-height: 100vh;
+        font-family: monospace;
+        font-size: 1.3em;
+        border-radius: 15px;
+        border: 2px solid #ffb5fe;
     }
 }
 
