@@ -245,9 +245,10 @@
     }
 
     .nav-picture {
-        height: auto;
-        display: block;
-        max-width: 60px
+        
+        max-width: 60px;
+        position: absolute;
+        left: 20px;
     }
 
     h1 {
