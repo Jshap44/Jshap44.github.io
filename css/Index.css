@@ -2,18 +2,31 @@
 
 body {
     background-color:black;
-    color: #cfa3ce;
+    color: #ffb5fe;
     margin: 0;
-    font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
+    background-image: url("../Proj1/subpages/1.png");
 }
 
 
 h1 {
-    font-family:fantasy;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size:3em;
     padding-left: 25px;
 }
 
+h2 {
+    font-size:2em;
+    display:flex ;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 div p {
     display: flex;
     max-width: 56%;
@@ -24,8 +37,6 @@ div p {
     padding-left: 15px;
     font-family: fantasy;
     font-size: 1.3em;
-
-
 }
 
 nav {
@@ -40,15 +51,17 @@ nav {
     width: 100%;
     height: 200px;
     overflow: hidden;
+    flex-wrap: wrap;
+    z-index: 10;
 }
 
 .nav-picture {
     height: auto;
     display: block;
     position:absolute;
-    right: 90px;
+    left: 286px;
+    z-index: 7;
 }
-
 
 ul {
     list-style-type: none;
@@ -57,21 +70,18 @@ ul {
 nav ul {
     display: flex;
     margin: 0;
-    gap: 120px;
+    gap: 170px;
     list-style: none;
     font-size: 2em;
-    color:#cfa3ce;
+    color:#ffb5fe;
     flex-grow: 1;
+    z-index: 15; 
 }
 
 nav ul li a {
-    color: #cfa3ce;
+    color: #ffb5fe;
     text-decoration: none; 
     font-weight: bold; 
-}
-
-.events li a {
-    color: white; 
 }
 
 .events {
@@ -87,65 +97,109 @@ nav ul li a {
     font-weight: bold;
     text-align: center;
     align-items: center;
-    justify-content: center;
-    background-color:blue;
+    font-size: 1.2em;
     padding: 120px;
     border-radius: 20px;
     margin-bottom: 20px;
-    max-width: 40%;
+    max-width: 100%;
 }
 
+.events li p {
+    display: flex; 
+    font-weight:normal;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 120px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.events li summary {
+    cursor: pointer;
+    text-decoration: underline;
+}
+details {
+    width: 100%;
+    margin: 0 auto; 
+}
 
 #concert1 {
-    background-image: url("../Proj1/celestial.png");
+    background-image: url("../Proj1/1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:aquamarine;
 }
 
 #concert2 {
-    background-image: url("../Proj1/echo.jpg");
+    background-image: url("../Proj1/1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: aquamarine;
 }
 
 #concert3 {
-    background-image: url("../Proj1/Galaxy.jpg");
+    background-image: url("../Proj1/1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: aquamarine;
 }
 
 #concert4 {
-    background-image: url("../Proj1/Multi.webp");
+    background-image: url("../Proj1/1.png");
+    background-size: cover;
     background-repeat: no-repeat;
-    background-size: 120%;
+    color: aquamarine;
 }
 
 #concert5 {
-    background-image: url("../Proj1/Frequency.jpg");
+    background-image: url("../Proj1/1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:aquamarine;
 }
 
 #concert6 {
-    background-image: url("../Proj1/Neuron.jpg");
+    background-image: url("../Proj1/1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: aquamarine;
 }
 
 #concert7 {
-    background-image: url("../Proj1/Galactic.jpg");
-    background-size: 130%;
+    background-image: url("../Proj1/1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: aquamarine;
 }
 
 #concert8 {
-    background-image: url("../Proj1/Ripples.jpg");
-    background-size: 100%;
+    background-image: url("../Proj1/1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: aquamarine;
 }
 
 #concert9 {
-    background-image: url("../Proj1/Dimension.jpg");
+    background-image: url("../Proj1/1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: aquamarine;
 }
 
 #concert10 {
-    background-image: url("../Proj1/Thermo.webp");
+    background-image: url("../Proj1/1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: aquamarine;
 }
 
 /* ------------------ */
 
 .concert {
-    background-image: url("../Proj1/subpages/Violin.jpg");
     background-repeat: no-repeat;
-    background-size:160%; 
 }
 
 .concert div {
@@ -156,7 +210,7 @@ nav ul li a {
     max-width: 50%;   
     padding: 15px;
     border-radius: 15px;
-    border: 2px solid #cfa3ce;
+    border: 2px solid #ffb5fe;
 }
 
 
@@ -167,186 +221,53 @@ nav ul li a {
     min-height: 100vh;
     font-family: monospace;
     font-size: 1.3em;
+    border-radius: 15px;
+    border: 2px solid #ffb5fe;
 }
 
-.concert nav {
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    background-image: url("../Proj1/nav.gif");
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
+@media screen and (max-width: 1500px) {
+    body {
+        font-size: 20px;
+    }
 }
 
-.concert .background-1 {
-    background-image: url("../Proj1/subpages/1.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
+/* For Smaller Screens (e.g., 400px) */
+@media screen and (max-width: 400px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+    }
 
+    nav ul li {
+        margin: 5px 0;
+    }
 
-.concert .nav-picture {
-    max-width: 100%;
-    height: auto;
-    padding-right: 0;
-    display: block;
-}
+    .nav-picture {
+        max-width: 80px; 
+    }
 
-.concert nav ul {
-    display: flex;
-    margin: 0;
-    gap: 165px;
-    list-style: none;
-    font-size: 2em;
-    flex-grow: 1;
-}
+    h1 {
+        font-size: 22px;
+        text-align: center;
+    }
 
-.concert nav ul li a {
-    color: #b981b8;
-    text-decoration: none; 
-    font-weight: bold; 
-}
+    h2 {
+        font-size: 18px;
+    }
 
-/* --------- */
+    details summary {
+        font-size: 16px;
+    }
 
-.eventpage body {
-    background-color:black;
-    color: #cfa3ce;
-    margin: 0;
-    font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
-}
-
-
-.eventpage h1 {
-    font-family:fantasy;
-    font-size:3em;
-    padding-left: 25px;
-}
-.eventpage nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    background-image: url("../Proj1/nav.gif");
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-}
-
-.eventpage .nav-picture {
-    height: auto;
-    display: block;
-    position:absolute;
-    right: 90px;
-}
-
-
-.eventpage ul {
-    list-style-type: none;
-}
-
-.eventpage nav ul {
-    display: flex;
-    margin: 0;
-    gap: 170px;
-    list-style: none;
-    font-size: 2em;
-    color:#cfa3ce;
-    flex-grow: 1;
-}
-
-.eventpage ul li a {
-    color: #cfa3ce;
-    text-decoration: none; 
-    font-weight: bold; 
-}
-
-.eventpage .events li a {
-    color: white; 
-}
-
-.eventpage .events {
-    display: flex;
-    gap: 10px; 
-    padding: 20px;
-    justify-content: center; 
-    display: block;
-}
-
-.eventpage .events li {
-    display: flex; 
-    font-weight: bold;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    background-color:blue;
-    padding: 120px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    max-width: 50%;
-}
-
-
-#concert1 {
-    background-image: url("../Proj1/celestial.png");
-}
-
-#concert2 {
-    background-image: url("../Proj1/echo.jpg");
-}
-
-#concert3 {
-    background-image: url("../Proj1/Galaxy.jpg");
-}
-
-#concert4 {
-    background-image: url("../Proj1/Multi.webp");
-    background-repeat: no-repeat;
-    background-size: 120%;
-}
-
-#concert5 {
-    background-image: url("../Proj1/Frequency.jpg");
-}
-
-#concert6 {
-    background-image: url("../Proj1/Neuron.jpg");
-}
-
-#concert7 {
-    background-image: url("../Proj1/Galactic.jpg");
-    background-size: 130%;
-}
-
-#concert8 {
-    background-image: url("../Proj1/Ripples.jpg");
-    background-size: 100%;
-}
-
-#concert9 {
-    background-image: url("../Proj1/Dimension.jpg");
-}
-
-#concert10 {
-    background-image: url("../Proj1/Thermo.webp");
-}
-
-/* ----- */
-
-.conductors {
-    display:flex;
-    background-color:black;
-    color: #cfa3ce;
-    margin: 0;
-    font: 1.2em / 1.2 Arial, Helvetica, sans-serif;
+    footer {
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
+    }
 }
