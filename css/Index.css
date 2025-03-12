@@ -247,7 +247,7 @@
     .nav-picture {
         
         max-width: 60px;
-        position: absolute;
+        height: 100%; 
 
     }
 
