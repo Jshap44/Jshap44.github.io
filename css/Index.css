@@ -28,6 +28,11 @@
         justify-content: center;
         align-items: center;
     }
+
+    hr {
+        height: 20px;
+        background-color: #ffb5fe;
+    }
     div p {
         display: flex;
         max-width: 56%;
@@ -197,6 +202,26 @@
         color: aquamarine;
     }
 
+    #tickets {
+        background-image:url("../Proj1/echo.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: aquamarine;
+    }
+    #conductors {
+        background-image:url("../Proj1/Galactic.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: aquamarine;
+    }
+
+    #about {
+        background-image:url("../Proj1/Ripples.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: aquamarine;
+    }
+
     /* ------------------ */
 
     .concert {
@@ -225,6 +250,7 @@
         border-radius: 15px;
         border: 2px solid #ffb5fe;
     }
+
 }
 
 @media screen and (max-width: 400px) {
