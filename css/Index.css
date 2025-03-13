@@ -256,16 +256,14 @@
 
     nav ul {
         flex-direction: column;
-        gap: 5px;
+        gap: 1px;
         font-size: 1.2em;
         gap: 10px;
     }
 
     .nav-picture {
-        
         max-width: 60px;
         height: 100%; 
-
     }
 
     h1 {
@@ -297,6 +295,32 @@
     footer {
         text-align: center;
         font-size: 0.9em;
+    }
+
+    #tickets {
+        background-image:url("../Proj1/echo.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: aquamarine;
+        padding: 40px;
+        font-size: 1em;
+    }
+    #conductors {
+        background-image:url("../Proj1/Galactic.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: aquamarine;
+        padding: 40px;
+        font-size: 1em;
+    }
+
+    #about {
+        background-image:url("../Proj1/Ripples.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: aquamarine;
+        padding: 40px;
+        font-size: 1em;
     }
 }
 
