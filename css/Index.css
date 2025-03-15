@@ -259,6 +259,7 @@
         flex-direction: column;
         gap: 1px;
         font-size: 1.2em;
+        justify-content: center;
     }
 
     .nav-picture {
