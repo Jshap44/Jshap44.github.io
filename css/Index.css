@@ -252,6 +252,7 @@
         text-align: center;
         width: 100%;
         height: 100px;
+        background-image: none;
     }
 
     nav ul {
@@ -260,10 +261,6 @@
         font-size: 1.2em;
     }
 
-    .nav-picture {
-        max-width: 100px;
-        height: 100%; 
-    }
 
     h1 {
         font-size: 1.5em;
