@@ -255,7 +255,6 @@
 
     nav ul {
         flex-direction: column;
-        gap: 1px;
         font-size: 1.2em;
     }
 
