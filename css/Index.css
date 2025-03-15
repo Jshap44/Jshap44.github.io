@@ -265,6 +265,7 @@
     .nav-picture {
         max-width: 100px;
         height: 100%; 
+        left: 220px;
     }
 
     h1 {
