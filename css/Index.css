@@ -263,9 +263,10 @@
     }
 
     .nav-picture {
-        max-width: 100px;
-        height: 100%; 
+        max-width: 80px;
+        height: 80%; 
         left: 220px;
+        overflow: hidden;
     }
 
     h1 {
