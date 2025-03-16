@@ -72,7 +72,7 @@
     nav ul {
         display: flex;
         margin: 0;
-        gap: 220px;
+        gap: 217px;
         list-style: none;
         font-size: 2em;
         color:#ffb5fe;
@@ -90,9 +90,10 @@
     .events {
         display: flex;
         gap: 10px; 
-        padding: 20px;
+        padding-right: 10px;
         justify-content: center; 
         display: block;
+        padding-left: 10px;
     }
 
     .events li {
@@ -195,7 +196,7 @@
         color: aquamarine;
     }
     #conductors {
-        background-image:url("../Proj1/Galactic.jpg");
+        background-image:url("../Proj1/conductor.webp");
         background-size: cover;
         background-repeat: no-repeat;
         color: aquamarine;
