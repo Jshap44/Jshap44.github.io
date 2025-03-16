@@ -255,8 +255,7 @@
         flex-direction: column;
         gap: 1px;
         font-size: 1.2em;
-        left: 120px;
-        justify-content: center;
+        text-align: center;
     }
     
 
