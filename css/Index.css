@@ -2,10 +2,9 @@
 
 @media screen and (max-width: 1500px) {
     body {
-        background-color:black;
+        background-image: url("../Proj1/Star.png");
         color: #ffb5fe;
         margin: 0;
-        background-image: url("../Proj1/subpages/1.png");
     }
 
 
@@ -29,10 +28,6 @@
         align-items: center;
     }
 
-    hr {
-        height: 20px;
-        background-color: #ffb5fe;
-    }
     div p {
         display: flex;
         max-width: 56%;
