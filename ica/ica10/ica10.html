@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Example</title>
+    <link rel="stylesheet" href="./ica10.css">
+</head>
+<body>
+
+    <h1 class="name">Hello!</h1>
+
+    <button id="squirrelBtn">Click for Squirrel</button>
+    <p id="chickenText">Click for Popeye's Chicken</p>
+    <script>
+        let btn = document.querySelector('#squirrelBtn');
+        let chickenText = document.querySelector('#chickenText');
+
+        btn.addEventListener('click', function() {
+            var img = document.createElement("img");
+            img.src = "./download.webp";
+            img.width = 100;
+            img.height = 100;
+            img.alt = "squirrel";
+            document.body.appendChild(img); 
+        });
+
+        chickenText.addEventListener('click', function() {
+            var img = document.createElement("img");
+            img.src = "./download.jpg";
+            img.width = 100;
+            img.height = 100;
+            img.alt = "Popeye's Chicken";
+            document.body.appendChild(img); 
+        });
+    </script>
+
+</body>
+</html>
