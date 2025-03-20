@@ -13,7 +13,6 @@ function randomValueFromArray(array){
 }
 
 randomize.addEventListener('click', result);
-customName.value = "Kevin Durant"
 function result() {
   let newStory = storyText;
   if(customName.value !== '') {
