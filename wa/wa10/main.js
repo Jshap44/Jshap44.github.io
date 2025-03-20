@@ -3,9 +3,9 @@ const randomize = document.querySelector('.randomize');
 const story = document.querySelector('.story');
 
 const storyText = "It was 94 fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.";
-const insertX = ["Willy the Goblin Big Daddy Father Christmas"];
-const insertY = ["the soup kitchen Disneyland the White House"];
-const insertZ = ["spontaneously combusted melted into a puddle on the sidewalk turned into a slug and crawled away"];
+const insertX = ["Jerry"];
+const insertY = ["Boulder"];
+const insertZ = ["sued whoever gave me the food poisoning I have right now"];
 
 function randomValueFromArray(array){
   const random = Math.floor(Math.random()*array.length);
@@ -13,34 +13,37 @@ function randomValueFromArray(array){
 }
 
 randomize.addEventListener('click', result);
-
+customName.value = "Kevin Durant"
 function result() {
+  let newStory = storyText;
   if(customName.value !== '') {
     const name = customName.value;
-
+    newStory = newStory.replaceAll("Bob", name)
   }
 
   if(document.getElementById("uk").checked) {
-    const weight = Math.round(300);
-    const temperature =  Math.round(94);
+    const weight = Math.round(300 / 14) + " stone";
+    const temperature = Math.round((94 - 32) * (5 / 9)) + " centigrade"; 
+
+    newStory = newStory.replace("94 fahrenheit", temperature);
+    newStory = newStory.replace("300 pounds", weight);
 
   }
 
-  story.textContent = ;
+  let xItem = randomValueFromArray(insertX);
+  let yItem = randomValueFromArray(insertY);
+  let zItem = randomValueFromArray(insertZ);
+
+  newStory = newStory.replaceAll(":insertx:", xItem);
+  newStory = newStory.replaceAll(":inserty:", yItem);
+  newStory = newStory.replaceAll(":insertz:", zItem);
+
+  story.textContent = newStory;
   story.style.visibility = 'visible';
   
-  let newStory = storyText;
 
-  let xword = ":insertx:";
-  let y
-  let xItem = randomValueFromArray();
-  let yItem = randomValueFromArray();
-  let zItem = randomValueFromArray();
 
-  if(newStory.includes(xword)){
-    xword = xItem;
-  }
-  if(newStory.includes(y))
+  
 
 
 }
