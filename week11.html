@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="heading">Hello!</h1>
+    
+    <script>
+        const header = document.querySelector('.heading') //reference to element
+        header.addEventListener('click', function(color) {
+            header.textContent = color;
+        }); //listen for click, do changeColor
+
+        function changeColor(color) {
+            header.textContent = color;
+        }
+        
+        var x = 0;
+        for (let i = 0; i < 10; i++) {
+            if(x == 2){
+                console.log("x is 2")
+            }
+            else if(x == 0) {
+                console.log("x is 0")
+            } else {
+                console.log("X")
+            }
+        }
+
+    </script>
+</body>
+</html>
