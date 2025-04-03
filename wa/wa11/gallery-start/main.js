@@ -5,9 +5,9 @@ const btn = document.querySelector('button');
 const overlay = document.querySelector('.overlay');
 
 /* Declaring the array of image filenames */
-const filenames = ["images/pic1.jpg", "images/pic2.jpg", "images/pic3.jpg", "images/pic4.jpg", "images/pic5.jpg"]
+const filenames = ["images/1.png", "images/2.png", "images/3.png", "images/4.png", "images/5.png"]
 /* Declaring the alternative text for each image file */
-const alternative = ["Eye", "Rock", "Flowers", "Hieroglyphs", "Butterfly"]
+const alternative = ["Water Droplets", "Water Pattern Produced by Sound", "Water Droplet Splash", "Strawberry Dropped in Water", "Water in Jar"]
 
 /* Looping through images */
 const thumb = document.getElementById('thumb-bar');
