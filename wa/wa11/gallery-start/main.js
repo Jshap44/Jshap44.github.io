@@ -5,7 +5,7 @@ const btn = document.querySelector('button');
 const overlay = document.querySelector('.overlay');
 
 /* Declaring the array of image filenames */
-const filenames = ["images/1.png", "images/2.png", "images/3.png", "images/4.png", "images/5.png"]
+const filenames = ["images/1.PNG", "images/2.png", "images/3.png", "images/4.png", "images/5.png"]
 /* Declaring the alternative text for each image file */
 const alternative = ["Water Droplets", "Water Pattern Produced by Sound", "Water Droplet Splash", "Strawberry Dropped in Water", "Water in Jar"]
 
