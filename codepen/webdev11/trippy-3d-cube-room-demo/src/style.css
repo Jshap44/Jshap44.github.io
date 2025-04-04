@@ -1,0 +1,241 @@
+:root {
+  --height: 1vh;
+  --width: 1vw;
+  --rotateX: 0deg;
+  --rotateY: 0deg;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #111111;
+  color: white;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+}
+
+.passage {
+  perspective: 500px;
+  perspective-origin: 50% 50%;
+  position: relative;
+  max-width: calc(var(--width) * 90);
+  margin: 0 auto;
+  z-index: 2;
+  transition: perspective-origin 0.1s;
+}
+
+.passage article {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.cell {
+  position: relative;
+  height: calc(var(--height) * 90);
+  width: calc(var(--width) * 90);
+  transform-style: preserve-3d;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  transform: scaleX(1) scaleY(1) scaleZ(1)
+    rotateX(calc(4deg + var(--rotateX))) rotateY(calc(4deg + var(--rotateY)))
+    rotateZ(0deg) translateX(0) translateY(0) translateZ(-10vmax) skewX(0deg)
+    skewY(0deg);
+  transition: transform 0.1s;
+}
+
+.cell > div {
+  position: absolute;
+  box-sizing: border-box;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  box-shadow: 0 0 calc(var(--height) * 15) inset rgba(0, 0, 0, 0.5),
+    0 0 calc(var(--height) * 2) inset rgba(0, 0, 0, 0.25), 0 0 0 4px inset #222,
+    0 0 calc(var(--height) * 2) calc(var(--height) * 2) inset
+      rgba(0, 0, 0, 0.25);
+  background-color: #111;
+  background-repeat: repeat;
+  background-size: calc(var(--width) * 90) calc(var(--height) * 90);
+  background-position: 0 0;
+  z-index: 2;
+}
+
+.cell .door {
+  width: 20%;
+  left: 15%;
+  min-width: 120px;
+  height: 70%;
+  top: 30%;
+  transform: translatez(-100px);
+  border-radius: 1000px 1000px 0 0;
+  border-right: 2vw solid #543a0c;
+  background: #222;
+}
+
+.cell .window {
+  display: block;
+  position: absolute;
+  width: 20%;
+  height: 50%;
+  border: 5px solid #111;
+  top: 25%;
+  left: 5%;
+  background: skyblue;
+    0 3px calc(var(--height) * 1) rgba(0, 0, 0, 0.35);
+  background-image: url('https://cybersandbox.ca/wp-content/uploads/2021/12/fw-wall-2.gif');
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.right .window {
+  left: unset;
+  right: 5%;
+}
+
+.back .window {
+  width: 33%;
+  left: 10%;
+}
+
+.cell .window::after,
+.cell .window::before {
+  content: "";
+  position: absolute;
+  border: 2px solid #111;
+}
+
+.cell .window::after {
+  top: 50%;
+  left: 0;
+  width: 100%;
+}
+
+.cell .window::before {
+  top: 0;
+  left: 50%;
+  height: 100%;
+}
+
+.cell .item {
+  width: 25%;
+  height: 70%;
+  top: 30%;
+  right: 15%;
+  min-width: 100px;
+  background-color: transparent;
+  box-shadow: unset;
+  background-image: url(https://cybersandbox.ca/wp-content/uploads/2024/11/pine-tree-1.png);
+  background-size: contain;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+}
+
+.cell .item + .item {
+  animation-delay: -0.5s;
+}
+
+.cell .item.small {
+  width: 15%;
+  min-width: 75px;
+  height: 50%;
+  top: 50%;
+  right: 60%;
+  animation-direction: reverse;
+}
+
+.cell .orb {
+  width: 70px;
+  height: 70px;
+  top: 35px;
+  left: calc(50% - 35px);
+  animation: spin 4s linear infinite;
+  border-radius: 100%;
+  background-color: orange;
+  filter: brightness(2) contrast(1.5) saturate(2);
+}
+.cell .orb + .orb {
+  animation-delay: -0.5s;
+}
+.cell .orb + .orb + .orb {
+  animation-delay: -1s;
+}
+.cell .orb + .orb + .orb + .orb {
+  animation-delay: -1.5s;
+}
+
+.spin {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotatey(0deg);
+  }
+  100% {
+    transform: rotatey(360deg);
+  }
+}
+
+.cell .back {
+  transform: translateZ(-100px) rotateY(180deg);
+}
+
+.cell .top {
+  transform: rotateX(-270deg) translateY(-100px);
+  transform-origin: top center;
+}
+
+.cell .bottom {
+  transform: rotateX(270deg) translateY(100px);
+  transform-origin: bottom center;
+}
+
+.cell .left {
+  transform: rotateY(270deg) translateX(-100px);
+  transform-origin: center left;
+}
+
+.cell .right {
+  transform: rotateY(-270deg) translateX(100px);
+  transform-origin: top right;
+}
+
+.cell .north-wall {
+  background: orange;
+  background-image: url('https://cybersandbox.ca/wp-content/uploads/2024/01/8bitflat.gif');
+  background-size: 100% auto;
+  background-position: bottom left;
+}
+
+.cell .east-wall {
+  background: magenta;
+  background-image: url('https://cybersandbox.ca/wp-content/uploads/2024/01/8bitflat.gif');
+  background-size: 100% auto;
+  background-position: top right;
+}
+
+.cell .west-wall {
+  background: green;
+  background-image: url('https://cybersandbox.ca/wp-content/uploads/2024/01/8bitflat.gif');
+  background-size: 100% auto;
+}
+
+.cell .south-wall {
+  background: red;
+}
+
+.cell .top-wall {
+  background: cyan;
+  background-image: url('https://cybersandbox.ca/wp-content/uploads/2021/11/b-noise.gif');
+  background-size: cover;
+}
+
+.cell .bottom-wall {
+  background: blue;
+  background-image: url('https://cybersandbox.ca/wp-content/uploads/2020/05/desktop.jpg');
+  background-size: contain;
+  background-position: bottom center;
+}
