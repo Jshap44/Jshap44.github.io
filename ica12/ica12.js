@@ -1,39 +1,39 @@
-        var newBtn = document.querySelector('#js-new-quote').addEventListener('click', getQuote);
-        var answerBTN = document.querySelector('#js-tweet').addEventListener('click', displayAnswer);
-        
-        var endpoint = "https://trivia.cyberwisp.com/getrandomchristmasquestion";
+var newBtn = document.querySelector('#js-new-quote').addEventListener('click', getQuote);
+var answerBTN = document.querySelector('#js-tweet').addEventListener('click', displayAnswer);
 
-        let current = {
-            question: "",
-            answer: ""
-        };
+var endpoint = "https://trivia.cyberwisp.com/getrandomchristmasquestion";
 
-        async function getQuote() {
-            try {
-                const response = await fetch(endpoint);
-                if(!response.ok) {
-                    throw Error(response.statusText);
-                }
+let current = {
+    question: "",
+    answer: ""
+};
 
-                const json = await response.json();
-                //console.log(json);
-                displayQuote(json.question);
-
-                current.question = json.question;
-                current.answer = json.answer;
-
-            } catch(err) {
-                console.log(err);
-                alert("Fail");
-            }
+async function getQuote() {
+    try {
+        const response = await fetch(endpoint);
+        if(!response.ok) {
+            throw Error(response.statusText);
         }
 
-        function displayQuote(quote) {
-            const quoteText = document.querySelector('#js-quote-text');
-            quoteText.textContent = quote;
-        }
+        const json = await response.json();
+        //console.log(json);
+        displayQuote(json.question);
 
-        function displayAnswer(answer) {
-          const answerText = document.querySelector('#js-answer-text');
-          answerText.textContent = current.answer;
-        }
+        current.question = json.question;
+        current.answer = json.answer;
+
+    } catch(err) {
+        console.log(err);
+        alert("Fail");
+    }
+}
+
+function displayQuote(quote) {
+    const quoteText = document.querySelector('#js-quote-text');
+    quoteText.textContent = quote;
+}
+
+function displayAnswer(answer) {
+  const answerText = document.querySelector('#js-answer-text');
+  answerText.textContent = current.answer;
+}
