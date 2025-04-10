@@ -1,5 +1,4 @@
 let Punchline = '';
-
     async function getJoke() {
     try {
       const response = await fetch('https://official-joke-api.appspot.com/jokes/random'); 
@@ -7,7 +6,6 @@ let Punchline = '';
       if(!response.ok) {
         throw Error(response.statusText);
     }
-
       document.querySelector('#setup').textContent = json.setup; 
       Punchline = json.punchline; 
       document.querySelector('#punchline').textContent = '';
