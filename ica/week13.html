@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const car = {
+            make: "Mazda",
+            model: "Cx-5",
+        }; //{} = dictionary
+
+        //CLASS USING FUNCTIONS
+        //const carList = ['Ford', 'Mazda', 'Honda']
+        //console.log(car["model"]);
+
+        //function cars(make, model) {
+            //this.make = make;
+            //this.model = model;
+        //}
+
+        //const aNewCar = cars("Toyota", "Rav4"); 
+
+        //console.log(aNewCar.make)
+
+        class Rectangle {
+            constructor(height, width) {
+                this.height = height;
+                this.width = width;
+            }
+
+            getArea() {
+                return this.height * this.width;
+            }
+        }
+
+        const rect1 = new Rectangle(100, 100);
+        console.log(rect1.width);
+        console.log(rect1.getArea());
+
+    </script>
+</body>
+</html>
