@@ -67,7 +67,8 @@ for(employee of company.employees){
     employee_array.push(employee.firstName);
 }
 
-console.log(company)
+
+console.log("Please see js file for how I logged info. I did not just type out answers as strings I have the entire JSON")
 //log problem 1
 console.log("problem 1");
   for(employee of company.employees) {
