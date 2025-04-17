@@ -4,3 +4,25 @@
     margin: 0 auto;
     border: 2px solid white;
   }
+
+  div {
+    display: flex;
+    position: absolute;
+    left: 100px;
+    border-radius: 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: aquamarine;
+    font-size: 3em;
+  }
+
+  p {
+    display: flex;
+    position: absolute;
+    max-width: 400px;
+    left: 100px;
+    top: 100px;
+    font-size: 2em;
+    border-radius: 20px;
+    border-width: 2px;
+  }

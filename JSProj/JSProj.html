@@ -4,11 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" src="./JSProj.css">
+    <link rel="stylesheet" href="./JSProj.css">
 </head>
 <body>
+
+    <div id="digitDisplay">Digits:</div>
+    <p>
+        Move the little green dude over your phone number using the arrow pad. <br><br>
+        When you reach 10 digits, press enter to restart if you failed to get your correct phone number.
+    </p>
     <canvas id="canvas1"></canvas>
     <script src="./JSProj.js">
+        setInterval(() => {
+        document.getElementById("digitDisplay").textContent = "Phone Number: " + window.digits.join(", ");
+        }, 100);
     </script>
+    <script>
+        setInterval(() => {
+          document.getElementById("digitDisplay").textContent = "Digits: " + window.digits.join("");
+        }, 100);
+      </script>
 </body>
 </html>

@@ -1,23 +1,128 @@
-
-
 const canvas = document.getElementById('canvas1');
 const ctx = canvas.getContext('2d');
 
-canvas.width = 800;
-canvas.height = 500;
+canvas.width = 400;
+canvas.height = 800;
 
 const keys = [];
 
+window.digits = [];
+const length = 10;
+let paused = false;
+
 const player = {
-    x: 0,
-    y: 550,
-    width: 24,
-    height: 22,
-    speed: 5
+  x: 200,
+  y: 600,
+  width: 24,
+  height: 22,
+  speed: 5,
+  moving: false
 };
+
+const balls = [];
+for (let i = 0; i < 10; i++) {
+  balls.push({
+    x: Math.random() * (canvas.width - 40) + 20,
+    y: Math.random() * canvas.height,
+    radius: 20,
+    label: i.toString()
+  });
+}
 
 const playerSprite = new Image();
 playerSprite.src = "./guy.png";
+
 const background = new Image();
 background.src = "./background.jpg";
 
+function isCollidingAABB(ball, player) {
+  return (
+    ball.x + ball.radius > player.x &&
+    ball.x - ball.radius < player.x + player.width &&
+    ball.y + ball.radius > player.y &&
+    ball.y - ball.radius < player.y + player.height
+  );
+}
+
+function animate() {
+  ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
+
+  balls.forEach(ball => {
+    if (!paused) {
+      ball.y += 5;
+
+      if (ball.y - ball.radius > canvas.height) {
+        ball.y = -ball.radius;
+        ball.x = Math.random() * (canvas.width - 40) + 20;
+      }
+    }
+
+    // Draw the ball
+    ctx.beginPath();
+    ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
+    ctx.fillStyle = "red";
+    ctx.fill();
+    ctx.closePath();
+
+    // Draw the number label
+    ctx.fillStyle = "white";
+    ctx.font = "16px Arial";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(ball.label, ball.x, ball.y);
+
+    // Collision with player
+    if (isCollidingAABB(ball, player) && window.digits.length < length && !paused) {
+      window.digits.push(parseInt(ball.label));
+      console.log("Digits collected:", window.digits);
+      ball.y = -ball.radius;
+      ball.x = Math.random() * (canvas.width - 40) + 20;
+
+      if (window.digits.length === length) {
+        paused = true;
+        console.log("Paused! Press Enter to continue.");
+      }
+    }
+  });
+
+  drawSprite(playerSprite, 0, 0, player.width, player.height, player.x, player.y, player.width, player.height);
+  move();
+  requestAnimationFrame(animate);
+}
+
+function drawSprite(img, sX, sY, sW, sH, dX, dY, dW, dH) {
+  ctx.drawImage(img, sX, sY, sW, sH, dX, dY, dW, dH);
+}
+
+background.onload = () => {
+  animate();
+};
+
+window.addEventListener("keydown", function (event) {
+  keys[event.keyCode] = true;
+
+  if (paused && event.key === "Enter") {
+    console.log("Game resumed!");
+    window.digits.splice(0, window.digits.length); // clear the digits
+    paused = false;
+  }
+});
+
+window.addEventListener("keyup", function (event) {
+  delete keys[event.keyCode];
+});
+
+function move() {
+  if (keys[38] && player.y > 0) {
+    player.y -= player.speed;
+  }
+  if (keys[37] && player.x > 0) {
+    player.x -= player.speed;
+  }
+  if (keys[40] && player.y < canvas.height - player.height) {
+    player.y += player.speed;
+  }
+  if (keys[39] && player.x < canvas.width - player.width) {
+    player.x += player.speed;
+  }
+}
