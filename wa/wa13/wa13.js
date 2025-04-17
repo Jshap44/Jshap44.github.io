@@ -1,3 +1,5 @@
+//All log statements are at the bottom
+
 //problem 5
 function isEligible(company) {
     const raise = [];
@@ -12,51 +14,11 @@ function isEligible(company) {
     return raise;
   }
 
-//Problem 1
-const employees = [
-    {
-      firstName: "Sam",
-      department: "Tech",
-      designation: "Manager",
-      salary: 40000,
-      raiseEligible: true,
-      //problem 6
-      wfh: true
-    },
-    {
-      firstName: "Mary",
-      department: "Finance",
-      designation: "Trainee",
-      salary: 18500,
-      raiseEligible: true,
-      wfh: false
-    },
-    {
-      firstName: "Bill",
-      department: "HR",
-      designation: "Executive",
-      salary: 21200,
-      raiseEligible: false,
-      wfh: false
-    },
-    //problem 3
-    {
-      firstName: "Anna",
-      department: "Tech",
-      designation: "Executive",
-      salary: 25600,
-      raiseEligible: false,
-      // also problem 6
-      wfh: true
-    }
-  ];
-  //problem 4
-  const totalSalary = 105300;
-
   //problem2
   const company = {
     companyName: "Tech Stars",
     website: "www.techstars.site",
+    //problem 1
     employees: [
       {
         firstName: "Sam",
@@ -83,34 +45,54 @@ const employees = [
         raiseEligible: false,
         wfh: false
       },
-      //also problem3
+      //problem3
       {
         firstName: "Anna",
         department: "Tech",
         designation: "Executive",
         salary: 25600,
         raiseEligible: false,
-        //also problem 6
+        //problem 6
         wfh: true
       }
-
     ]
   };
 
-console.log("problem 1")
-  for(employee of employees) {
+//problem 4
+const totalSalary = 105300;
+
+
+const employee_array = [];
+for(employee of company.employees){
+    employee_array.push(employee.firstName);
+}
+
+console.log(company)
+//log problem 1
+console.log("problem 1");
+  for(employee of company.employees) {
     console.log(employee.firstName + " " + employee.department + " " + employee.designation + " " +
         employee.salary + " " + employee.raiseEligible + " " + employee.wfh)
   }
+
+  //log problem 2
   console.log("problem 2");
-  console.log("company JSON: " + company);
+  console.log("Name: " + company.companyName + ";" + " Website: " + company.website + ";" + " " + "employees: " + employee_array)
+
+  //log problem 3
   console.log("problem 3");
-  console.log("New employee: " + employees[3]);
+  console.log("New employee: " + company.employees[3].firstName);
+
+  //log problem 4
   console.log("problem 4");
   console.log("total salary: " + totalSalary);
+
+  //log problem 5
   console.log("problem 5");
   const problem5 = isEligible(company);
   console.log("Raise: " + problem5);
+
+  //log problem 6
   console.log("problem 6")
-  console.log("Sam working from home? " + employees[0].wfh + " "+ "| " +
-    "Anna working from home?: " +  employees[3].wfh);
+  console.log("Sam working from home? " + company.employees[0].wfh + " "+ "| " +
+    "Anna working from home?: " +  company.employees[3].wfh);
