@@ -68,7 +68,7 @@ for(employee of company.employees){
 }
 
 
-console.log("Please see js file for how I logged info. I did not just type out answers as strings I have the entire JSON")
+console.log("Please see js file for how I logged info. I did not just type out answers as strings. I have the entire JSON. Did extra work on accident")
 //log problem 1
 console.log("problem 1");
   for(employee of company.employees) {
