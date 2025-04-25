@@ -1,7 +1,7 @@
 const canvas = document.querySelector('#canvas1');
 const ctx = canvas.getContext('2d');
 
-canvas.width = 400;
+canvas.width = 450;
 canvas.height = 730;
 
 const keys = [];
@@ -58,21 +58,20 @@ function animate() {
       }
     }
 
-    // Draw the ball
     ctx.beginPath();
     ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
     ctx.fillStyle = "red";
     ctx.fill();
     ctx.closePath();
 
-    // Draw the number label
+
     ctx.fillStyle = "white";
     ctx.font = "16px Arial";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     ctx.fillText(ball.label, ball.x, ball.y);
 
-    // Collision with player
+
     if (isCollidingAABB(ball, player) && window.digits.length < length && !paused) {
       window.digits.push(parseInt(ball.label));
       console.log("Digits collected:", window.digits);
@@ -85,6 +84,7 @@ function animate() {
     }
   });
 
+  //player movement video https://www.youtube.com/watch?v=EYf_JwzwTlQ
   drawSprite(playerSprite, 0, 0, player.width, player.height, player.x, player.y, player.width, player.height);
   move();
   requestAnimationFrame(animate);
