@@ -48,10 +48,12 @@ function isCollidingAABB(ball, player) {
 function animate() {
   ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
-  balls.forEach(ball => {
+  for (let i = 0; i < balls.length; i++) {
+    let ball = balls[i];
+  
     if (!paused) {
       ball.y += 5;
-
+  
       if (ball.y - ball.radius > canvas.height) {
         ball.y = -ball.radius;
         ball.x = Math.random() * (canvas.width - 40) + 20;
@@ -64,13 +66,11 @@ function animate() {
     ctx.fill();
     ctx.closePath();
 
-
     ctx.fillStyle = "white";
     ctx.font = "16px Arial";
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     ctx.fillText(ball.label, ball.x, ball.y);
-
 
     if (isCollidingAABB(ball, player) && window.digits.length < length && !paused) {
       window.digits.push(parseInt(ball.label));
@@ -82,10 +82,11 @@ function animate() {
         paused = true;
       }
     }
-  });
+  };
 
   //player movement video https://www.youtube.com/watch?v=EYf_JwzwTlQ
   drawSprite(playerSprite, 0, 0, player.width, player.height, player.x, player.y, player.width, player.height);
+
   move();
   requestAnimationFrame(animate);
 }
@@ -102,7 +103,7 @@ window.addEventListener("keydown", function (event) {
   keys[event.keyCode] = true;
 
   if (paused && event.key === "Enter") {
-    console.log("Game resumed!");
+    console.log("resumed");
     window.digits.splice(0, window.digits.length); 
     paused = false;
   }
