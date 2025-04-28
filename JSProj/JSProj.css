@@ -1,6 +1,6 @@
 body {
   max-height: 700;
-  background-color:aqua;
+  background-color:blueviolet;
 }
 
 
@@ -32,5 +32,53 @@ body {
     font-size: 2em;
     border-radius: 20px;
     border-width: 2px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    body {
+      background-color:blueviolet;
+    }
+    #canvas1 {
+      background: black;
+      position: absolute;
+      right: 0;
+      display: block;
+      margin: 0 auto;
+      border: 2px solid white;
+      height: 750px;
+    }
+  }
+
+  @media screen and (max-width: 830px) {
+    body {
+      background-color:blueviolet;
+    }
+    #canvas1 {
+      background: black;
+      position: absolute;
+      right: 0;
+      display: block;
+      margin: 0 auto;
+      border: 2px solid white;
+      max-width: 350px;
+      height: 750px;
+    }
+  }
+
+
+  @media screen and (max-width: 700px) {
+    body {
+      background-color:blueviolet;
+    }
+    #canvas1 {
+      background: black;
+      position: absolute;
+      right: 0;
+      display: block;
+      margin: 0 auto;
+      border: 2px solid white;
+      max-width: 120px;
+      height: 750px;
+    }
   }
 
