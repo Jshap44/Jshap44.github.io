@@ -12,6 +12,7 @@ body {
   }
 
   div {
+    background-color:deepskyblue;
     display: flex;
     position: absolute;
     left: 80px;
@@ -36,6 +37,7 @@ body {
   #confirmBox {
     width: 20%;
     display:flex;
+    fill: aqua;
     size: 4;
     border-radius: 2px;
     font-size: 2em;
