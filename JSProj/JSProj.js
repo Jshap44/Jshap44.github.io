@@ -1,8 +1,8 @@
 const canvas = document.querySelector('#canvas1');
 const ctx = canvas.getContext('2d');
 
-canvas.width = 450;
-canvas.height = 730;
+canvas.width = 520;
+canvas.height = 700;
 
 const keys = [];
 
@@ -12,7 +12,7 @@ let paused = false;
 
 const player = {
   x: 200,
-  y: 600,
+  y: 500,
   width: 24,
   height: 22,
   speed: 5,
@@ -71,6 +71,7 @@ function animate() {
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     ctx.fillText(ball.label, ball.x, ball.y);
+    
 
     if (isCollidingAABB(ball, player) && window.digits.length < length && !paused) {
       window.digits.push(parseInt(ball.label));
@@ -80,6 +81,26 @@ function animate() {
 
       if (window.digits.length === length) {
         paused = true;
+      
+        const confirmBox = document.querySelector("#confirmBox");
+        const confirmText = document.querySelector("#confirmText");
+        const yesBtn = document.querySelector("#yesBtn");
+        const noBtn = document.querySelector("#noBtn");
+      
+        const number = window.digits.join("");
+      
+        confirmBox.style.display = "block";
+      
+        yesBtn.onclick = () => {
+          alert("Thanks for confirming!");
+          confirmBox.style.display = "none";
+        };
+      
+          noBtn.onclick = () => {
+          window.digits.splice(0, window.digits.length);
+          paused = false;
+          confirmBox.style.display = "none";
+        };
       }
     }
   };
