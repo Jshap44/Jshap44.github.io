@@ -106,7 +106,8 @@ function animate() {
   };
 
   //player movement video https://www.youtube.com/watch?v=EYf_JwzwTlQ
-  drawSprite(playerSprite, 0, 0, player.width, player.height, player.x, player.y, player.width, player.height);
+  drawSprite(playerSprite, 0, 0, player.width, player.height, player.x, player.y, player.width * 2, player.height * 2);
+
 
   move();
   requestAnimationFrame(animate);
