@@ -92,7 +92,7 @@ function animate() {
         confirmBox.style.display = "block";
       
         yesBtn.onclick = () => {
-          alert("cool");
+          alert("cool - press enter to play again");
           confirmBox.style.display = "none";
         };
       
