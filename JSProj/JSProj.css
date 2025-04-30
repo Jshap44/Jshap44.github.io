@@ -85,7 +85,7 @@ body {
   }
 
   #confirmationMessage {
-    display:flex;
+    display: none; 
     position: absolute;
     justify-content: center;
     align-items: center;
@@ -96,6 +96,7 @@ body {
     font-size: 2em;
     top: 250px;
     border-radius: 20px;
+    background-color: blueviolet;
     color: white;
     z-index: 10;
   }
