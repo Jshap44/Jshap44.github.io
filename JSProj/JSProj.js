@@ -2,7 +2,7 @@ const canvas = document.querySelector('#canvas1');
 const ctx = canvas.getContext('2d');
 
 canvas.width = 520;
-canvas.height = 700;
+canvas.height = 750;
 
 const keys = [];
 
@@ -93,8 +93,8 @@ function animate() {
       
         yesBtn.onclick = () => {
           const confirmationMessage = document.querySelector("#confirmationMessage");
-          confirmationMessage.textContent = "Cool — press Enter to play again";
-          confirmationMessage.style.display = "flex"; // ⬅️ Add this here
+          confirmationMessage.textContent = "Cool — press 'Enter' to play again";
+          confirmationMessage.style.display = "flex"; 
           confirmBox.style.display = "none";
         };
       
