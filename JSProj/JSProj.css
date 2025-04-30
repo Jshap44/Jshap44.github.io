@@ -25,7 +25,9 @@ body {
     border-radius: 20px;
     background-color: darkviolet;
     font-size: 1.5em;
-    padding: 10px;
+    padding: 20px;
+    padding-bottom: 0;
+    padding-left: 30px;
   }
 
   p {
@@ -38,7 +40,7 @@ body {
     display: flex;
     position: absolute;
     left: 30px;
-    bottom: 220px;
+    top: 200px;
     font-size: 2.7em;
   }
 
@@ -69,11 +71,11 @@ body {
   position: absolute;
   background-color: darkviolet;
   z-index: 10;
-  animation: bounceAround 27s linear infinite; 
+  animation: bounceAround 15s linear infinite; 
 }
 
   button {
-    color: blue;
+    color: blueviolet;
     font-size: 1em;
     background-color: white;
   }
