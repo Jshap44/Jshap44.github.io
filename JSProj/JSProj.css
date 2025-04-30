@@ -57,7 +57,7 @@ body {
 }
 
 #confirmBox {
-  display: flex;     
+  display: none;     
   align-items: center;   
   justify-content: center;
   width: 400px;
@@ -69,10 +69,8 @@ body {
   position: absolute;
   background-color: darkviolet;
   z-index: 10;
-
   animation: bounceAround 27s linear infinite; 
 }
-  
 
   button {
     color: blue;
