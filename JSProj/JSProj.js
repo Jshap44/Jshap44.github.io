@@ -92,16 +92,18 @@ function animate() {
         confirmBox.style.display = "block";
       
         yesBtn.onclick = () => {
-          alert("cool - press enter to play again");
+          const confirmationMessage = document.querySelector("#confirmationMessage");
+          confirmationMessage.textContent = "Cool — press Enter to play again";
+          confirmationMessage.style.display = "flex"; // ⬅️ Add this here
           confirmBox.style.display = "none";
         };
       
-          noBtn.onclick = () => {
+        noBtn.onclick = () => {
+          confirmBox.style.display = "none";
           window.digits.splice(0, window.digits.length);
           paused = false;
-          confirmBox.style.display = "none";
         };
-      }
+      }      
     }
   };
 
@@ -128,6 +130,10 @@ window.addEventListener("keydown", function (event) {
     console.log("resumed");
     window.digits.splice(0, window.digits.length); 
     paused = false;
+
+    const confirmationMessage = document.querySelector("#confirmationMessage");
+    confirmationMessage.textContent = "";
+    confirmationMessage.style.display = "none";
   }
 });
 

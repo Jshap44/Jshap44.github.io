@@ -9,51 +9,97 @@ body {
     display: block;
     margin: 0 auto;
     border: 2px solid white;
+    z-index: 1;
   }
 
-  div {
-    background-color:deepskyblue;
+  h2 {
     display: flex;
     position: absolute;
-    left: 80px;
-    border-radius: 2px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: blue;
-    font-size: 2em;
+    left: 30px;        
+    top: 20px; 
+    height:105px; 
+    width: 340px;         
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color: darkviolet;
+    font-size: 1.5em;
+    padding: 10px;
   }
 
   p {
+    padding-left: 8px;
+  }
+
+  #digitDisplay {
+    background-color: darkviolet;
+    color: white;
     display: flex;
     position: absolute;
-    max-width: 300px;
-    left: 80px;
-    top: 100px;
-    font-size: 1.5em;
-    border-radius: 20px;
-    border-width: 2px;
+    left: 30px;
+    bottom: 220px;
+    font-size: 2.7em;
   }
 
-  #confirmBox {
-    width: 350px;
-    display:flex;
-    fill: aqua;
-    size: 4;
-    border-radius: 2px;
-    font-size: 2em;
-    position: absolute;
-    bottom: 400px;
-  }
+  @keyframes bounceAround {
+    0%   { top: 5vh;  left: 10vw; }
+    10%  { top: 30vh; left: 70vw; }
+    20%  { top: 80vh; left: 20vw; }
+    30%  { top: 50vh; left: 50vw; }
+    40%  { top: 15vh; left: 80vw; }
+    50%  { top: 70vh; left: 10vw; }
+    60%  { top: 25vh; left: 40vw; }
+    70%  { top: 60vh; left: 75vw; }
+    80%  { top: 20vh; left: 30vw; }
+    90%  { top: 85vh; left: 50vw; }
+    100% { top: 5vh;  left: 10vw; }
+}
+
+#confirmBox {
+  display: flex;     
+  align-items: center;   
+  justify-content: center;
+  width: 400px;
+  height: 190px;
+  border-radius: 20px;
+  font-size: 2.5em;
+  color: white;
+  border-color: white;
+  position: absolute;
+  background-color: darkviolet;
+  z-index: 10;
+
+  animation: bounceAround 27s linear infinite; 
+}
+  
 
   button {
-    color:blue;
-    font-size: .8em;
+    color: blue;
+    font-size: 1em;
+    background-color: white;
   }
 
   button:hover {
     cursor: pointer;
   }
 
+  #confirmationMessage {
+    display:flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    width:340px;
+    height: 100px;
+    left: 555px;
+    font-size: 2em;
+    top: 250px;
+    border-radius: 20px;
+    color: white;
+    background-color: darkviolet;
+    z-index: 10;
+  }
 
   @media screen and (max-width: 1400px) { 
     #canvas1 {
