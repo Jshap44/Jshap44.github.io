@@ -22,11 +22,11 @@
         Move the little green dude over your phone number using the arrow pad. <br><br>
     </h2>
     <canvas id="canvas1"></canvas>
-    <script src="./JSProj.js">
+    <script src="./JSProj.js"></script> <!-- external file only -->
+    <script>
         setInterval(() => {
             document.getElementById("digitDisplay").textContent = "Phone Number: " + window.digits.join(", ");
         }, 100);
-
     </script>
     <script>
         setInterval(() => {

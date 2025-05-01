@@ -68,7 +68,7 @@ body {
   position: absolute;
   background-image: url("./lebron.png");
   z-index: 10;
-  animation: bounceAround 3s linear infinite alternate;
+  animation: bounceAround 4s linear infinite alternate;
 }
 
   button {
