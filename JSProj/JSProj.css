@@ -47,11 +47,11 @@ body {
   @keyframes bounceAround {
     0% {
       left: 0;
-      top: calc(100% - 190px); /* bottom */
+      top: calc(100% - 190px); 
     }
     100% {
-      left: calc(100% - 400px); /* right */
-      top: 0; /* top */
+      left: calc(100% - 400px); 
+      top: 0; 
     }
 }
 
