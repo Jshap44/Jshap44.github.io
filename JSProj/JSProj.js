@@ -52,7 +52,7 @@ function animate() {
     let ball = balls[i];
   
     if (!paused) {
-      ball.y += 5.5;
+      ball.y += 5.7;
   
       if (ball.y - ball.radius > canvas.height) {
         ball.y = -ball.radius;
