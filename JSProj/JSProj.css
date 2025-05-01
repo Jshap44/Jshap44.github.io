@@ -45,17 +45,14 @@ body {
   }
 
   @keyframes bounceAround {
-    0%   { top: 5vh;  left: 10vw; }
-    10%  { top: 30vh; left: 70vw; }
-    20%  { top: 80vh; left: 20vw; }
-    30%  { top: 50vh; left: 50vw; }
-    40%  { top: 15vh; left: 80vw; }
-    50%  { top: 70vh; left: 10vw; }
-    60%  { top: 25vh; left: 40vw; }
-    70%  { top: 60vh; left: 75vw; }
-    80%  { top: 20vh; left: 30vw; }
-    90%  { top: 85vh; left: 50vw; }
-    100% { top: 5vh;  left: 10vw; }
+    0% {
+      left: 0;
+      top: calc(100% - 190px); /* bottom */
+    }
+    100% {
+      left: calc(100% - 400px); /* right */
+      top: 0; /* top */
+    }
 }
 
 #confirmBox {
@@ -69,9 +66,9 @@ body {
   color: white;
   border-color: white;
   position: absolute;
-  background-color: darkviolet;
+  background-image: url("./lebron.png");
   z-index: 10;
-  animation: bounceAround 15s linear infinite; 
+  animation: bounceAround 3s linear infinite alternate;
 }
 
   button {
